@@ -31,21 +31,32 @@ int comb(int n, int x, int ene, int xis){
     return 0;    
 }
 
+int pex(float p, float P, int xis, int x){
+
+}
+
+
+int qnx(float p, float P, int xis, int x, int n, int ene){
+
+}
+
 int main(){
  
-    int ene, xis, nx, n, x;
-    float p, combinacao;
+    int ene, xis, nx, n, x, combinacao;
+    float p, P, PEX, QNX;
 
     //pedindo os valores de n e x
     printf("Digite o número de observações: \n");
     scanf("%d", &ene);
-    // printf("Digite a probabilidade de sucesso: \n");
-    // scanf("%f", &p);
+    printf("Digite a probabilidade de sucesso: \n");
+    scanf("%f", &p);
     printf("Digite o número especificado de sucesso: \n");
     scanf("%d", &xis);
     n = ene;
     x = xis;
     combinacao = comb(n, x, ene, xis);
+    PEX = pex(p, P, xis, x);
+    QNX = qnx(p, P, xis, x, n, ene);
 
     return 0;
 }

@@ -41,6 +41,7 @@ int pex(float p, float P, int xis){
         expo *= P;
     }
         printf("p ^ x = %.5f\n", expo);
+        return expo;
 }
 
 

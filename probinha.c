@@ -1,4 +1,5 @@
 #include <stdio.h>
+//#include <math. h> 
 
 int comb(int n, int x, int ene, int xis){
     //começo da conta de Combinação
@@ -31,18 +32,25 @@ int comb(int n, int x, int ene, int xis){
     return 0;    
 }
 
-int pex(float p, float P, int xis, int x){
-
+int pex(float p, float P, int xis){
+    
+    int seq;
+    float expo;
+    expo = P;
+    for(seq = 0; seq < (xis - 1); seq++){
+        expo *= P;
+    }
+        printf("p ^ x = %.5f\n", expo);
 }
 
 
-int qnx(float p, float P, int xis, int x, int n, int ene){
-
+int qnx(float p, float P, int xis, int ene){
+    
 }
 
 int main(){
  
-    int ene, xis, nx, n, x, combinacao;
+    int ene, xis, xiss, nx, n, x, combinacao;
     float p, P, PEX, QNX;
 
     //pedindo os valores de n e x
@@ -54,9 +62,13 @@ int main(){
     scanf("%d", &xis);
     n = ene;
     x = xis;
+    P = p;
+    //chamando funçao combinação
     combinacao = comb(n, x, ene, xis);
-    PEX = pex(p, P, xis, x);
-    QNX = qnx(p, P, xis, x, n, ene);
+    //chamando função de calcular o P elevado a X
+    PEX = pex(p, P, xis);
+    //chamando função de calcular o q elavado a n - x
+    QNX = qnx(p, P, xis, ene);
 
     return 0;
 }
